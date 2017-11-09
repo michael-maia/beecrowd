@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1017-Fuel_Spent", "1017-Fuel_Spent\1017-Fuel_Spent.csproj", "{1633900C-A725-4FBB-81B7-CFA528FC4DCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1633900C-A725-4FBB-81B7-CFA528FC4DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1633900C-A725-4FBB-81B7-CFA528FC4DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1633900C-A725-4FBB-81B7-CFA528FC4DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1633900C-A725-4FBB-81B7-CFA528FC4DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34C9E2CD-B2C6-460F-9862-1E471EE00806}
+	EndGlobalSection
+EndGlobal
