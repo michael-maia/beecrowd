@@ -20,7 +20,7 @@ namespace _1047_GameTimeWithMinutes
                 m_var++;
             } while (!(m_start == m_final));
             h_var=m_var/60;
-            
+            //CONTINUE HERE
             Console.WriteLine("O JOGO DUROU {0} HORA(S) E {1} MINUTO(S)", h_var, m_var);            
         }
     }
