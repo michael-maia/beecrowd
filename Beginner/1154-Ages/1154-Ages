@@ -1,0 +1,10 @@
+soma = 0
+qtdeIdade = 0
+
+while True:
+    idade = int(input())
+    if idade >= 0:
+        soma += idade
+        qtdeIdade += 1
+    else:
+        print(soma / qtdeIdade)
