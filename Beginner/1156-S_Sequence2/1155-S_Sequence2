@@ -1,0 +1,7 @@
+S = 0
+
+for i in range(20):
+    S += (1 + 2*i) / (2**i)
+
+#print(round(S,2)) -> Vai arredondar o numero
+print("%.2f" % S) # Vai mostrar 2 numeros após a virgula
