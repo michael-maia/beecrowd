@@ -6,6 +6,7 @@ list_even = []
 N = int(input())
 
 # Caso o número N não esteja dentro do range específicado na questão
+# OBS: Questionário está errado e deve ser considerado o range abaixo
 if(N > 1 and N <= 100000):
     # Loop para digitar os N números e verificar se é par/ímpar para colocar em sua respectiva lista
     for i in range(N):
