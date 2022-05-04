@@ -1,27 +1,46 @@
-using System;
-//Question : https://www.urionlinejudge.com.br/judge/en/problems/view/1047
-namespace _1047_GameTimeWithMinutes
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string[] values = Console.ReadLine().Split(' ');
-            int h_start = int.Parse(values[0]);
-            int m_start = int.Parse(values[1]);
-            int h_final = int.Parse(values[2]);
-            int m_final = int.Parse(values[3]);
-            int m_var = 0;
-            m_start = (h_start*60) + m_start;
-            m_final = (h_final*60) + m_final;
-            do
-            {
-                m_start++;
-                m_var++;
-            } while (!(m_start == m_final));
-            h_var=m_var/60;
-            //CONTINUE HERE
-            Console.WriteLine("O JOGO DUROU {0} HORA(S) E {1} MINUTO(S)", h_var, m_var);            
-        }
+﻿// See https://aka.ms/new-console-template for more information
+//Question : https://www.beecrowd.com.br/judge/en/problems/view/1047
+string[] hourInput = Console.ReadLine().Split(' ');
+
+// Separando os numeros que representam as horas (inicial e final) e os minutos (inicial e final)
+int initialHour = int.Parse(hourInput[0]);
+int initialMinute = int.Parse(hourInput[1]);
+int finalHour = int.Parse(hourInput[2]);
+int finalMinute = int.Parse(hourInput[3]);
+
+// Numeros que serão printados
+int printHour = 0;
+int printMinute = 0;
+
+if(finalMinute == initialMinute){
+    if(!(initialHour < finalHour)){
+        printHour = 24 - (initialHour - finalHour);
+    }
+    else{
+        printHour = finalHour - initialHour;
     }
 }
+else if(finalMinute < initialMinute){
+    // Se não for o caso abaixo, aplica o cálculo da hora para o restante
+    if(finalHour > initialHour){
+        printHour = (finalHour - initialHour) - 1;
+    }
+    else{
+        printHour = 23 - (initialHour - finalHour);
+    }
+    // Todos os casos de hora terão que realizar o cálculo dos minutos
+    printMinute = 60 - (initialMinute - finalMinute);
+}
+else{
+    if(finalHour < initialHour){
+        printHour = 23 - (finalHour - initialHour);
+    }
+    else{
+
+        printHour = finalHour - initialHour;
+    }
+    // Todos os casos de hora terão que realizar o cálculo dos minutos
+    printMinute = finalMinute - initialMinute;
+}
+
+Console.WriteLine($"O JOGO DUROU {printHour} HORA(S) E {printMinute} MINUTO(S)");
