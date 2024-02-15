@@ -4,60 +4,48 @@ class Program
 {
     static void Main()
     {
-        double salary = double.Parse(Console.ReadLine());
-        double salary2 = salary;
-        double taxesValue = 0;
-        int index = 0;
+        float salary = float.Parse(Console.ReadLine());
+        float salaryTemp = salary;
+        float taxValue = 0.00f;
 
-        if (salary >= 0 && salary <= 2000.00)
+        if (salary <= 2000)
         {
             Console.WriteLine("Isento");
         }
         else
         {
-            salary2 -= 2000.00;
-            //if (salary2 >= 1000.00)
-            //{                
-            //    taxesValue += (1000.00 * 0.08);
-            //    salary2 -= 1000.00;
-            //    index++;
-            //}
-            //else
-            //{
-            //    taxesValue += (salary2 * 0.08);                
-            //}
+            salaryTemp -= 2000;
 
-            //if (salary2 >= 1500.00)
-            //{
-            //    taxesValue += (1500.00 * 0.18);
-            //    salary2 -= 1500.00;
-            //    index++;
-            //}
-            //else
-            //{
-            //    taxesValue += (salary2 * 0.18);                
-            //}
-
-            //if(salary2 >= 4500.00)
-            //{
-            //    taxesValue += (salary2 * 0.28);                
-            //}
-            if (salary2 > 2000.00 && salary2 <= 3000.00)
+            if (salary >= 2000.01)
             {
-                taxesValue += (1000.00 * 0.08);                               
+                if (salaryTemp < 1000)
+                {
+                    taxValue += salaryTemp * 0.08f;
+                }
+                else
+                {
+                    taxValue += 80;
+                    salaryTemp -= 1000;
+                }
             }
-            else if (salary2 > 3000.00 && salary2 <= 4500.00)
+            if (salary >= 3000.01)
             {
-                taxesValue += (1000.00 * 0.08);
-                taxesValue += (1500.00 * 0.18);
-                
-            }           
-            else
+                if (salaryTemp < 1000)
+                {
+                    taxValue += salaryTemp * 0.18f;
+                }
+                else
+                {
+                    taxValue += 270;
+                    salaryTemp -= 1500;
+                }
+            }
+            if (salary > 4500)
             {
-                taxesValue += (salary2 * 0.28);
+                taxValue += salaryTemp * 0.28f;
             }
 
-            Console.WriteLine("R$ " + taxesValue.ToString("0.00"));
+            Console.WriteLine($"R$ {taxValue.ToString("0.00")}");
         }
     }
 }
